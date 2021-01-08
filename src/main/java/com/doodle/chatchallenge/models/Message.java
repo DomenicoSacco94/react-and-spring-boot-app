@@ -18,7 +18,7 @@ public class Message {
     private String text;
 
     @Column(name="send_date")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM-dd-yyyy HH:mm:ss.ssss")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM-dd-yyyy HH:mm:ss.SSS")
     private Timestamp sendDate;
 
     public Long getId() {
