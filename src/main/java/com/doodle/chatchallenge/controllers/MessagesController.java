@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * Contains the controller methods managing the <code>Message</code> entity
+ */
 @RestController
 @RequestMapping("/api/v1/messages")
 public class MessagesController {

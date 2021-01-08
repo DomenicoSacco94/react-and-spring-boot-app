@@ -16,7 +16,7 @@ import javax.sql.DataSource;
 import java.util.Arrays;
 import java.util.List;
 /**
- * Class initializing the Hibernate <code>Datasoruce</code>, <code>SessionFactory</code> and <code>Properties</code>
+ * Class initializing the Hibernate <code>Datasource</code> and its properties
  */
 @Configuration
 @EnableTransactionManagement

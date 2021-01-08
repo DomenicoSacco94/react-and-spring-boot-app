@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.doodle</groupId>
 	<artifactId>chatchallenge</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>chatchallenge</name>
 	<description>Doodle challenge project for Spring Boot</description>
 
@@ -60,6 +60,10 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<version>2.4.1</version>
+				<configuration>
+					<mainClass>com.doodle.chatchallenge.ChatchallengeApplication</mainClass>
+				</configuration>
+
 			</plugin>
 		</plugins>
 	</build>

@@ -6,6 +6,9 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.UUID;
 
+/**
+ * Models the <code>Message</code> entity and its properties
+ */
 @Entity
 public class Message {
 
