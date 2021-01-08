@@ -15,6 +15,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.sql.DataSource;
 import java.util.Arrays;
 import java.util.List;
+
 /**
  * Class initializing the Hibernate <code>Datasource</code> and its properties
  */
@@ -31,9 +32,14 @@ public class HibernateConf {
     @Value("${spring.datasource.password}")
     private String password;
 
-    @Value("${spring.datasource.url}")
-    private String url;
+    @Value("${spring.datasource.host}")
+    private String host;
 
+    @Value("${spring.datasource.port}")
+    private String port;
+
+    @Value("${spring.datasource.name}")
+    private String name;
 
     @Bean
     public DataSource dataSource() {
@@ -41,7 +47,13 @@ public class HibernateConf {
         dataSource.setDriverClassName("org.postgresql.Driver");
         List<String> profiles = Arrays.asList(this.environment.getActiveProfiles());
 
-        dataSource.setUrl(url);
+        //if tests are started, the DB connection through localhost is used, otherwise connects to the postgres-db set up by docker-composer
+        if (profiles.contains("test")) {
+            this.host = "localhost";
+        }
+
+        dataSource.setUrl("jdbc:postgresql://" + this.host + ":" + this.port + "/" + this.name);
+
         dataSource.setUsername(this.user);
         dataSource.setPassword(this.password);
 
