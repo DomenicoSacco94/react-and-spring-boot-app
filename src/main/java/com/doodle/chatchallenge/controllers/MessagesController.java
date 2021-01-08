@@ -25,7 +25,8 @@ public class MessagesController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void create(@RequestBody Message message) {
+    public Message create(@RequestBody Message message) {
         messageRepository.save(message);
+        return message;
     }
 }

@@ -11,7 +11,7 @@ CREATE SEQUENCE IF NOT EXISTS chat_schema.hibernate_sequence
 ALTER SEQUENCE chat_schema.hibernate_sequence
     OWNER TO postgres;
 CREATE TABLE IF NOT EXISTS "chat_schema"."message" (
-    id UUID,
+    id UUID PRIMARY KEY,
     sender_name varchar,
     text varchar,
     send_date varchar
