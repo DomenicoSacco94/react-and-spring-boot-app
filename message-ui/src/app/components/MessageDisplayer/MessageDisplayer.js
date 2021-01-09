@@ -26,6 +26,26 @@ export default class MessageDisplayer extends Component {
         });
       }
     );
+
+    const intervalId = setInterval(this.timer.bind(this), 1000);
+    this.setState({ intervalId: intervalId });
+  }
+
+  timer() {
+    // setState method is used to update the state
+    getMessages().then((messageList) => {
+      this.props.setMessageList(messageList);
+    });
+  }
+
+  componentWillUnmount() {
+    // use intervalId from the state to clear the interval
+    clearInterval(this.state.intervalId);
+  }
+
+  componentDidUpdate() {
+    const objDiv = document.getElementById("chatList");
+    if (objDiv) objDiv.scrollTop = objDiv.scrollHeight;
   }
 
   render() {
@@ -37,7 +57,7 @@ export default class MessageDisplayer extends Component {
       return <div>Loading messages...</div>;
     } else {
       return (
-        <div className="chat-message-list">
+        <div id="chatList" className="chat-message-list">
           {this.props.messageList.map((message) => (
             <Message
               key={message.id}
