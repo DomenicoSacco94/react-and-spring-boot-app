@@ -7,7 +7,7 @@ services:
     ports:
       - "5436:5436"
     expose:
-      - "5432"
+      - "5436"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -22,5 +22,16 @@ services:
       - .:/var/www/html
     ports:
       - "8080:8080"
+    expose:
+      - "8080"
     working_dir: /var/www/html
     command: bash -c "java -jar target/chatchallenge-1.0.0.jar"
+  webapp:
+    container_name: webapp
+    build: ../message-ui
+    ports:
+      - "3000:3000"
+    expose:
+      - "3000"
+    labels:
+      NAME: "webapp"
