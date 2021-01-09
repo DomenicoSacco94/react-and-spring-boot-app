@@ -1,11 +1,11 @@
 import "./App.css";
-import MessageDisplayer from "./components/MessageDisplayer";
+import ChatBox from "./components/ChatBox/ChatBox";
+
 function App() {
   return (
     <>
-      <div className="App">
-        <header className="App-header">Doodle Chat App</header>
-        <MessageDisplayer />
+      <div className="app">
+        <ChatBox />
       </div>
     </>
   );
