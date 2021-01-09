@@ -5,7 +5,7 @@ services:
     image: postgres:latest
     restart: always
     ports:
-      - "5432:5432"
+      - "5436:5436"
     expose:
       - "5432"
     environment:
