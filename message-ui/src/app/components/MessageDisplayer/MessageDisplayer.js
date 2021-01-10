@@ -63,7 +63,11 @@ export default class MessageDisplayer extends Component {
       return <div>Loading messages...</div>;
     } else {
       return (
-        <div id="chatList" className="chat-message-list">
+        <div
+          id="chatList"
+          data-cy="chat-message-list"
+          className="chat-message-list"
+        >
           {this.props.messageList.map((message) => (
             <Message
               key={message.id}

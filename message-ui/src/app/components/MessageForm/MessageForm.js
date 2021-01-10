@@ -43,6 +43,7 @@ export default class MessageForm extends Component {
       <div className="message-form-container">
         <form className="message-form" onSubmit={this.submitHandler}>
           <input
+            data-cy="message-textbox"
             className="message-textbox"
             type="text"
             name="name"
@@ -50,7 +51,12 @@ export default class MessageForm extends Component {
             onChange={this.changeHandler}
             value={this.state.message.text}
           />
-          <input className="message-button" type="submit" value="Send" />
+          <input
+            className="message-button"
+            type="submit"
+            value="Send"
+            data-cy="send-button"
+          />
         </form>
       </div>
     );

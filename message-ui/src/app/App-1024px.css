@@ -18,6 +18,20 @@
     margin: 6px 0;
   }
 
+  .message-form-container {
+    padding: 10px;
+  }
+
+  .message-button {
+    padding-right: 50px;
+    margin-top: 6px;
+    font-size: 1em;
+  }
+
+  .message-textbox {
+    width: 80%;
+  }
+
   .chat-message {
     margin: 10px;
     padding: 10px;

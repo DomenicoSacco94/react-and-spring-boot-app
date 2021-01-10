@@ -24,13 +24,19 @@ class LoginForm extends Component {
         <div className="login-label">Doodle Chat App</div>
         <form className="login-form" onSubmit={this.submitHandler.bind(this)}>
           <input
+            data-cy="login-textbox"
             className="login-textbox"
             type="text"
             name="name"
             placeholder="Enter username..."
             onChange={this.changeHandler}
           />
-          <input className="login-button" type="submit" value="Login" />
+          <input
+            data-cy="login-button"
+            className="login-button"
+            type="submit"
+            value="Login"
+          />
         </form>
       </div>
     );
