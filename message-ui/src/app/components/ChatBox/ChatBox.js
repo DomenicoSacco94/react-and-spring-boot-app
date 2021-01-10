@@ -3,13 +3,17 @@ import React, { useState } from "react";
 import MessageDisplayer from "../MessageDisplayer/MessageDisplayer";
 import MessageForm from "../MessageForm/MessageForm";
 
-const ChatBox = () => {
+const ChatBox = (props) => {
   const [list, setList] = useState([]);
 
   return (
     <>
-      <MessageDisplayer messageList={list} setMessageList={setList} />
-      <MessageForm setMessageList={setList} />
+      <MessageDisplayer
+        currentUser={props.currentUser}
+        messageList={list}
+        setMessageList={setList}
+      />
+      <MessageForm currentUser={props.currentUser} setMessageList={setList} />
     </>
   );
 };

@@ -38,12 +38,18 @@ export default class MessageDisplayer extends Component {
     });
   }
 
+  componentDidUpdate(prev) {
+    if (prev.messageList.length !== this.props.messageList.length) {
+      this.scrollToBottom();
+    }
+  }
+
   componentWillUnmount() {
     // use intervalId from the state to clear the interval
     clearInterval(this.state.intervalId);
   }
 
-  componentDidUpdate() {
+  scrollToBottom() {
     const objDiv = document.getElementById("chatList");
     if (objDiv) objDiv.scrollTop = objDiv.scrollHeight;
   }
@@ -61,6 +67,11 @@ export default class MessageDisplayer extends Component {
           {this.props.messageList.map((message) => (
             <Message
               key={message.id}
+              className={
+                message.senderName === this.props.currentUser
+                  ? "chat-message-user"
+                  : "chat-message"
+              }
               senderName={message.senderName}
               text={message.text}
               sendDate={message.sendDate}

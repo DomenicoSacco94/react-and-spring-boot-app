@@ -26,12 +26,3 @@ services:
       - "8080"
     working_dir: /var/www/html
     command: bash -c "java -jar target/chatchallenge-1.0.0.jar"
-  webapp:
-    container_name: webapp
-    build: ../message-ui
-    ports:
-      - "3000:3000"
-    expose:
-      - "3000"
-    labels:
-      NAME: "webapp"

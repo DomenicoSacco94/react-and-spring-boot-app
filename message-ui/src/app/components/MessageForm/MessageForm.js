@@ -5,7 +5,7 @@ import { saveMessages } from "../../services/MessageService";
 export default class MessageForm extends Component {
   constructor(props) {
     super(props);
-    this.state = { message: { senderName: "currentUser", text: "" } };
+    this.state = { message: { text: "" } };
   }
 
   submitHandler = (event) => {
@@ -14,13 +14,10 @@ export default class MessageForm extends Component {
       const date = moment().format("DD-MM-YYYY HH:mm:ss.SSS").toString();
 
       const messageToSend = {
-        senderName: this.state.message.senderName,
+        senderName: this.props.currentUser,
         text: this.state.message.text,
         sendDate: date,
       };
-
-      console.log("props of message form");
-      console.log(this.props);
 
       saveMessages(messageToSend);
 
