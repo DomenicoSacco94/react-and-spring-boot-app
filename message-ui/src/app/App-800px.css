@@ -1,0 +1,49 @@
+@media only screen and (max-width: 800px) {
+  .login-form-container {
+    padding: 30px;
+    width: 60%;
+  }
+
+  .login-label {
+    font-size: 1.5em;
+  }
+
+  .login-textbox {
+    padding: 6px 10px;
+    margin: 4px 0;
+  }
+
+  .login-form-container {
+    margin-top: 20%;
+  }
+
+  .login-button {
+    padding: 6px 10px;
+    margin: 4px 0;
+  }
+
+  .chat-message {
+    margin: 0 0 5px 0;
+    padding: 5px;
+  }
+
+  .chat-message-user {
+    margin: 0 0 5px 10px;
+    padding: 10px;
+    width: 90%;
+  }
+
+  .message-form-container {
+    padding: 10px;
+  }
+
+  .message-textbox {
+    width: 80%;
+  }
+
+  .message-button {
+    padding-right: 30px;
+    margin-top: 6px;
+    font-size: 1em;
+  }
+}

@@ -1,0 +1,14 @@
+@media only screen and (max-width: 480px) {
+  .message-form-container {
+    padding: 5px;
+  }
+
+  .message-textbox {
+    width: 70%;
+  }
+
+  .message-button {
+    padding-right: 30px;
+    margin-top: 6px;
+  }
+}

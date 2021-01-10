@@ -1,0 +1,22 @@
+@media only screen and (max-width: 640px) {
+  .login-form-container {
+    padding: 10px;
+    width: 80%;
+  }
+
+  .login-form-container {
+    margin-top: 45%;
+  }
+
+  .login-textbox {
+    padding: 3px 5px;
+    margin: 10px 0;
+    width: 80%;
+  }
+
+  .login-button {
+    padding: 3px 5px;
+    margin: 10px 0;
+    width: 80%;
+  }
+}

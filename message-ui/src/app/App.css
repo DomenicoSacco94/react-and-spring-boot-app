@@ -4,7 +4,6 @@
 }
 
 .app-header {
-  background-color: lightblue;
   padding: 10px;
   text-align: center;
 }
@@ -15,22 +14,23 @@
   background-color: white;
   display: flex;
   flex-wrap: wrap;
+  text-align: left;
 }
 
 .chat-message {
   width: 100%;
-  text-align: left;
   margin: 15px;
   box-sizing: border-box;
+  word-wrap: break-word;
 }
 
 .chat-message-user {
   width: 100%;
-  text-align: right;
   box-sizing: border-box;
   margin: 25px;
   border: 1px solid black;
   padding: 10px;
+  word-wrap: break-word;
 }
 
 .sender {
@@ -60,7 +60,7 @@
 
 .message-button {
   text-align: center;
-  padding-right: 2%;
+  padding-right: 40px;
   margin-top: 3px;
   float: right;
   font-weight: bold;
@@ -76,7 +76,9 @@
 
 .login-form-container {
   background-color: white;
+  display: block;
   margin: auto;
+  margin-top: 10%;
   width: 40%;
   padding: 60px;
 }
@@ -88,6 +90,7 @@
 .login-label {
   margin: 8px 0 8px 0;
   text-align: center;
+  font-size: 3em;
 }
 
 .login-textbox {

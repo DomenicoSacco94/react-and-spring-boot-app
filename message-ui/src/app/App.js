@@ -1,4 +1,8 @@
 import "./App.css";
+import "./App-1024px.css";
+import "./App-800px.css";
+import "./App-640px.css";
+import "./App-480px.css";
 import ChatBox from "./components/ChatBox/ChatBox";
 import LoginForm from "./components/LoginForm/LoginForm";
 import { useState } from "react";

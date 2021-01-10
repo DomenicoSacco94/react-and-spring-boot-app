@@ -1,0 +1,30 @@
+@media only screen and (max-width: 1024px) {
+  .login-form-container {
+    padding: 40px;
+    width: 60%;
+  }
+
+  .login-label {
+    font-size: 2em;
+  }
+
+  .login-textbox {
+    padding: 8px 15px;
+    margin: 6px 0;
+  }
+
+  .login-button {
+    padding: 8px 15px;
+    margin: 6px 0;
+  }
+
+  .chat-message {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .chat-message-user {
+    padding: 15px;
+    padding: 15px;
+  }
+}
