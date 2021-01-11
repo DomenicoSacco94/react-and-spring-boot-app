@@ -14,6 +14,12 @@ Start docker Hiking API containers (must be in project working directory):
 
 **docker-compose up**
 
+The project will be accessible at **http://localhost:3000**
+and the username provided at the fake login page will be displayed in the written messages.
+
+To restart the app as another user it is sufficient to refresh the page
+or simply open a new browser tab.
+
 Stop the containers:
 
 **docker-compose down**
