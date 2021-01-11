@@ -18,7 +18,7 @@ Stop the containers:
 
 **docker-compose down**
 
-Remove containers for instance (in case a total reset a is needed):
+Remove containers (in case a total reset is needed):
 
 **docker-compose rm ${docker ps -a}**
 
