@@ -24,7 +24,12 @@ import java.util.List;
 public class HibernateConf {
 
     @Autowired
+    public HibernateConf(Environment environment) {
+        this.environment = environment;
+    }
+
     private Environment environment;
+
 
     @Value("${spring.datasource.username}")
     private String user;

@@ -2,11 +2,10 @@ package com.doodle.chatchallenge.controllers;
 
 import com.doodle.chatchallenge.models.Message;
 import com.doodle.chatchallenge.repositories.MessageRepository;
+import com.doodle.chatchallenge.services.MessagesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -17,19 +16,20 @@ import java.util.List;
 public class MessagesController {
 
     @Autowired
-    private MessageRepository messageRepository;
+    public MessagesController(MessagesService messagesService) {
+        this.messagesService = messagesService;
+    }
+
+    private MessagesService messagesService;
 
     @GetMapping
     public List<Message> list() {
-        List<Message> messages = messageRepository.findAll();
-        messages.sort(Comparator.comparing(Message::getSendDate));
-        return messages;
+        return messagesService.list();
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Message create(@RequestBody Message message) {
-        messageRepository.save(message);
-        return message;
+      return messagesService.create(message);
     }
 }

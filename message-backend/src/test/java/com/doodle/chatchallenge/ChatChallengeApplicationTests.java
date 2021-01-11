@@ -31,16 +31,19 @@ class ChatChallengeApplicationTests {
 	private String API_PATH = "/api/v1/messages";
 
 	@Autowired
+	public ChatChallengeApplicationTests(TestRestTemplate restTemplate, DataSource dataSource, MessageRepository messageRepository) {
+		this.restTemplate = restTemplate;
+		this.datasource = dataSource;
+		this.messageRepository = messageRepository;
+	}
+
 	private TestRestTemplate restTemplate;
 
-	@Autowired
 	private DataSource datasource;
 
-	@Autowired
 	private MessageRepository messageRepository;
 
 	private static boolean dataLoaded = false;
-
 
 	//sets up some examples on which do the testing
 	@BeforeAll
