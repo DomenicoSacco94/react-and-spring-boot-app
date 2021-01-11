@@ -1,4 +1,4 @@
-###INSTRUCTIONS:
+INSTRUCTIONS:
 
 The project is deployed through 3 containers:
 
