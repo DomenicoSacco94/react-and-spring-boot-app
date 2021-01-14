@@ -1,3 +1,9 @@
+INFO & PURPOUSE:
+
+This is a sample fullstack project involving spring-boot and React technologies, it implements a messaging app in which a login page is presented to prompt the username and write messages
+
+
+
 INSTRUCTIONS:
 
 The project is deployed through 3 containers:
