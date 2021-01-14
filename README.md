@@ -1,16 +1,16 @@
-INFO & PURPOUSE:
+<h2> INFO & PURPOUSE </h2>
 
 This is a sample fullstack project involving spring-boot and React technologies, it implements a messaging app in which a login page is presented to prompt the username and write messages
 
 <p align="center">
-<img src="screenshots/screen_1.png">
+<img width="50%" src="screenshots/screen_1.png">
 </p>
 
 <p align="center">
-<img src="screenshots/screen_2.png">
+<img width="50%" src="screenshots/screen_2.png">
 </p>
 
-INSTRUCTIONS:
+<h2> INSTRUCTIONS <h2/>
 
 The project is deployed through 3 containers:
 
