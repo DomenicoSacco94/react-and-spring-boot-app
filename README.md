@@ -10,7 +10,7 @@ To build the required docker containers, use the following commands in the **mes
 
 **docker-compose build**
 
-Start docker Hiking API containers (must be in project working directory):
+Start docker API containers (must be in **message-backend** directory):
 
 **docker-compose up**
 
