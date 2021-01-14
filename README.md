@@ -2,7 +2,9 @@ INFO & PURPOUSE:
 
 This is a sample fullstack project involving spring-boot and React technologies, it implements a messaging app in which a login page is presented to prompt the username and write messages
 
+![Screenshot 1](screenshots/screen_1.png?raw=true "Title")
 
+![Screenshot 2](screenshots/screen_2.png?raw=true "Title")
 
 INSTRUCTIONS:
 
