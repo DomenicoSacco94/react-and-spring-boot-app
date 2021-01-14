@@ -10,7 +10,7 @@ This is a sample fullstack project involving spring-boot and React technologies,
 <img width="50%" src="screenshots/screen_2.png">
 </p>
 
-<h2> INSTRUCTIONS <h2/>
+<h2> INSTRUCTIONS </h2>
 
 The project is deployed through 3 containers:
 
